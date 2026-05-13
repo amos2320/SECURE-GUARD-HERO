@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+@theme {
+  --color-navy: #0A1628;
+  --color-teal: #00C896;
+  --color-red: #E53935;
+  --color-text-muted: #94A3B8;
+
+  @keyframes pulse-teal {
+    0% { box-shadow: 0 0 0 0 rgba(0, 200, 150, 0.4); }
+    70% { box-shadow: 0 0 0 12px rgba(0, 200, 150, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(0, 200, 150, 0); }
+  }
+
+  @keyframes scanline {
+    0% { transform: translateY(-100%); }
+    100% { transform: translateY(100%); }
+  }
+
+  @keyframes noise {
+    0%, 100% { opacity: 0.1; }
+    50% { opacity: 0.15; }
+  }
+
+  @keyframes bounce-custom {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(8px); }
+  }
+}
+
+@layer base {
+  body {
+    @apply bg-navy text-white antialiased;
+  }
+}
